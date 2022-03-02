@@ -11,75 +11,70 @@ header{
 }
 main{
   width:100%;
-  
-  margin-top:50px;
-}
-.blog{
-  display:flex;
-  flex-wrap:wrap;
+  margin:50px auto;
+  display: flex;
   justify-content: center;
 }
+.blog-list{
+  width:300px;
+  margin-right: 30px;
+  padding: 10px;
+  background-color:#EEEEEE;
+  position: relative;
+}
+
+.blog-list:last-child {
+  margin-right: 0;
+}
+
 
 .blog1{
   background-image:url(img/flow01.png);
-  width:280px;
+  background-position: bottom;
   height:150px;
   background-size:cover;
-  margin:0 auto;
 }
 
 .blog2{
   background-image:url(img/flow02.png);
-  width:280px;
+  background-position: bottom;
   height:150px;
   background-size:cover;
-  margin:0 auto;
 }
 
 .blog3{
   background-image:url(img/flow03.png);
-  width:280px;
   height:150px;
   background-size:cover;
-  margin:0 auto;
+  margin:0;
   
 }
 
-.blog-item{
-  width:300px;
-  background-color:#EEEEEE;
-  padding:10px 10px 0 10px;
-}
 
 .blog-title{
-  margin-top:15px;
-  margin-bottom:5px;
+  margin:15px 0 5px;
 }
 
-.width{
-  margin-right:30px;
+.step-num {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ff9a4b;
+  color: #fff;
 }
-
 footer{
   width:100%;
   height:50px;
   background-color:#AAAAAA;
-  margin-top:50px;
+  /* margin-top:50px; */
 }
-
-.absolute{
-  position:absolute;
-  
-  background-color:orange;
-}
-
 
 @media screen and (max-width:768px){
   header{
    width:100%;
   }
 
-  .blog{
+  main{
     width:100%;
     flex-direction:column;
     align-items:center;
@@ -87,9 +82,14 @@ footer{
 
   .blog-list{
     width:90%;
+    flex-direction:column;
+    align-items:center;
     margin:0 auto;
-    margin-bottom:20px;
+    margin-bottom:20px; 
   }
+  .blog-list:last-child {
+    margin:auto; 
+}
 
   .blog-item{
     width:100%;
